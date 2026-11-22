@@ -1,0 +1,246 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #3e2723;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #d7a86e;
+}
+
+/* Hero */
+.hero {
+  background-color: #f5ede4;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #3e2723;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background-color: #3e2723;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d7a86e;
+  color: #3e2723;
+}
+
+/* Sections */
+#about,
+#menu,
+#contact {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+#about h2,
+#menu h2,
+#contact h2 {
+  font-size: 32px;
+  color: #3e2723;
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Menu */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.menu-item {
+  background-color: #f5ede4;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.menu-item h3 {
+  color: #3e2723;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #b8843f;
+  font-size: 18px;
+}
+
+/* Contact */
+#contact .details {
+  color: #555;
+  margin-top: 8px;
+}
+
+#contact .btn {
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d7a86e;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #3e2723;
+  color: #f5ede4;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socials a {
+  color: #f5ede4;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.socials a:hover {
+  background-color: #d7a86e;
+  color: #3e2723;
+  transform: translateY(-3px);
+}
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #d7a86e;
+  outline-offset: 3px;
+}
+
+/* Mobile - keep this block LAST in the file */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  #about,
+  #menu,
+  #contact {
+    padding: 50px 20px;
+  }
+}
